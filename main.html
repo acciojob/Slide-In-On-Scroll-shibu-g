@@ -58,16 +58,18 @@
       };
     }
    function han() {
-   	let img=document.querySelectorAll(".slide-in");
+	   
+   	let img=document.querySelectorAll('.slide-in');
 	   img.forEach(function (i) {
-	   	let he=window.scrollY+window.innerHeight-i.height;
-		   let bot=img.scrollTop+i.height;
+		   
+	   	let he=window.scrollY+window.innerHeight-i.height/2;
+		   let bot=i.offsetTop+i.height;
 	       let full=he>bot;
-		   let half=he>img.scrollTop;
+		   let half=he>i.offsetTop;
 		   if(half&&!full){
-			   img.classList.add("active");
+			   i.classList.add("active");
 		   }else{
-			img.classList.remove('active');   
+			i.classList.remove('active');   
 		   }
 	   });
    }
