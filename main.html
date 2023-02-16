@@ -57,7 +57,13 @@
         if (callNow) func.apply(context, args);
       };
     }
-
+   function han() {
+   	let img=document.querySelectorAll(".slide-in");
+	   img.forEach(function (i) {
+	   	
+	   });
+   }
+	  window.addEventListener('scroll',debounce(han));
   </script>
 
   <style>
