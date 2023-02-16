@@ -60,14 +60,15 @@
    function han() {
 	   
    	let img=document.querySelectorAll('.slide-in');
-	   img.forEach(function (i) {
+	   img.forEach((i) =>{
 		   
-	   	let he=window.scrollY+window.innerHeight-i.height/2;
+	   	let he=window.scrollY + window.innerHeight - i.height/2;
 		   let bot=i.offsetTop+i.height;
-	       let full=he>bot;
+	       
+		   let full=window.scrollY>bot;
 		   let half=he>i.offsetTop;
 		   if(half&&!full){
-			   i.classList.add("active");
+			   i.classList.add('active');
 		   }else{
 			i.classList.remove('active');   
 		   }
